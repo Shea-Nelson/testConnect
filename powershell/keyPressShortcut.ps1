@@ -14,7 +14,7 @@ do {
         $githubpid = (Get-Process githubdesktop).Id
         Write-Host $githubpid
         $wshell = New-Object -ComObject wscript.shell        
-        $wshell.AppActivate('githubdesktop')
+        $wshell.AppActivate('GitHub Desktop')
         Start-Sleep 1
         $wshell.SendKeys('^+{p}')
         Start-Sleep 1
