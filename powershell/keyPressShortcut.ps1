@@ -11,8 +11,10 @@ do {
             [PsOneApi.Keyboard]::GetAsyncKeyState($key2) -eq -32767 -and 
             [PsOneApi.Keyboard]::GetAsyncKeyState($key3) -eq -32767)) { 
         Write-Host "You pressed the combo keys, oh my!!" -ForegroundColor Green
-        $wshell = New-Object -ComObject wscript.shell
-        $wshell.AppActivate('GitHubDesktop.exe')
+        $githubpid = (Get-Process githubdesktop).Id
+        Write-Host $githubpid
+        $wshell = New-Object -ComObject wscript.shell        
+        $wshell.AppActivate('githubdesktop')
         Start-Sleep 1
         $wshell.SendKeys('^+{p}')
         Start-Sleep 1
