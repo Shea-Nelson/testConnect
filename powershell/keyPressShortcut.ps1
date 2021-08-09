@@ -1,4 +1,4 @@
-$key = [Byte][Char]'K' ## Letter
+$key = [Byte][Char]'Z' ## Letter
 $key2 = '0x11' ## Ctrl
 $key3 = '0x12' ## Alt 
 $Signature = @'
